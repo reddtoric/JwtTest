@@ -35,6 +35,7 @@ namespace Jwt.Controllers
         [AllowAnonymous]
         public IActionResult Login([FromBody]User login)
         {
+            Console.WriteLine(login);
             IActionResult response = Unauthorized();
             User user = AuthenticateUser(login);
 
