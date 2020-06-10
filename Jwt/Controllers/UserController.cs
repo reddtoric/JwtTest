@@ -10,6 +10,7 @@ namespace Jwt.Controllers
     {
         [HttpGet]
         [Route("GetAdminData")]
+        // [Authorize]
         [Authorize(Policy = Policies.Admin)]
         public IActionResult GetAdminData()
         {
@@ -18,6 +19,7 @@ namespace Jwt.Controllers
 
         [HttpGet]
         [Route("GetUserData")]
+        // [Authorize]
         [Authorize(Policy = Policies.User)]
         public IActionResult GetUserData()
         {
